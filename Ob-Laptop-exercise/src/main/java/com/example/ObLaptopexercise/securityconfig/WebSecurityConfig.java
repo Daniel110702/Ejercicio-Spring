@@ -20,7 +20,7 @@ public class WebSecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
         http.authorizeRequests()
                 .antMatchers("/hola").permitAll()
-                .antMatchers("/boostrap").hasRole("ADMIN")
+                .antMatchers("/api/laptops").hasRole("ADMIN")
                 .anyRequest()
                 .authenticated()
                 .and()
