@@ -52,7 +52,7 @@ public class LaptopController {
 
     // Create a new Laptop in the Database.
 
-    @PostMapping("/api/laptops")
+    @PostMapping("/api/post/laptops")
     @ApiOperation("Create a new Laptop in Database.")
     public ResponseEntity<Laptop> create(@RequestBody Laptop laptop, @RequestHeader HttpHeaders headers){
         System.out.println(headers.get("User-Agent"));
